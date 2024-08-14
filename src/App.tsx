@@ -1,16 +1,22 @@
+import { TextStyle } from "pixi.js";
 import "./App.sass";
-interface ApplicationPropType {
-	age: number,
-	fname : string
-}
-
-function App2({ age, fname }: ApplicationPropType) {
-	return <h2 className="app">I am {fname}, and I am {age <= 1 ? age + ' year' : age+' years'} old </h2>
-}
+import { Stage, Container, Sprite, Text } from '@pixi/react';
 
 export default function App() {
+
 	return <>
-		<App2 age={10} fname={'Smiles Digital Wallet Corporation'} />
+		<Stage width={1200} height={1200} options={{ background: 'black' }}>
+			<Sprite image="https://pixijs.io/pixi-react/img/bunny.png" x={0} y={0} anchor={{ x: 0.5, y: 0.5 }} />
+			<Container x={500} y={230}>
+				<Text text="Hi there" anchor={{ x: 0.5, y: 0.5 }}  
+				style={
+					new TextStyle({
+						align: 'center', fill: ['white', 'red'],stroke: 'white', strokeThickness: 5, fontSize: 60, letterSpacing: 4
+					})
+				}
+				/>
+			</Container>
+		</Stage>
 	</>
 }
 
