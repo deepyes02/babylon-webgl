@@ -15,7 +15,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@babylonjs/core": "^5.0.0-rc.13"
+    "@babylonjs/controls": "^2.0.0-alpha.1",
+    "@babylonjs/loaders": "^7.20.1",
+    "babylon": "^6.18.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.9.0",
